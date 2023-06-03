@@ -16,6 +16,8 @@ DHT dht(DHTPIN, DHTTYPE);
 
 Liquid_Crystal_I2C lcd(16, 2, 0x24);   // LCD Width , LCD height, LCD I2C Address 
 
+#include "classes.h"
+
 void setup() {
   // put your setup code here, to run once:
 }
