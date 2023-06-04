@@ -7,7 +7,7 @@ public:
     lcd.begin();
 
     if (!RTC.begin()) {
-      Serial.println(Error in RTC);
+      Serial.println("Error in RTC");
       while (true)
         ;  // Loop forever
 
@@ -41,11 +41,17 @@ public:
 
 class TemperatureClass {
 public:
+
+  void begin() {
+    dht.begin();
+
+  }
+
   void DisplayTemp() {
     float Temp = dht.readTemperature();
 
     lcd.clear();
-    lcd.setCursor(11,0);
+    lcd.setCursor(11, 0);
     lcd.print(Temp);
   }
 };
